@@ -1,0 +1,23 @@
+{
+  "name": "slowreveal",
+  "description": "Animate SVG line drawings.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "animate",
+    "svg"
+  ],
+  "authors": [
+    {
+      "name": "Scott Doxey",
+      "email": "hello@scottdoxey.com",
+      "homepage": "http://scottdoxey.com/"
+    }
+  ],
+  "homepage": "https://github.com/neogeek/slowreveal",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/neogeek/slowreveal.git"
+  }
+}
