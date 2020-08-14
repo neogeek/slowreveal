@@ -6,7 +6,10 @@ const slowreveal = (svg, options = {}) => {
     const { speed } = { ...defaultOptions, ...options };
 
     const load = () => {
-        const paths = svg.getSVGDocument().querySelectorAll('path');
+        const paths = (svg.getSVGDocument
+            ? svg.getSVGDocument()
+            : svg
+        ).querySelectorAll('path');
 
         paths.forEach(path => {
             path.style.strokeDasharray = path.getTotalLength();
@@ -18,7 +21,9 @@ const slowreveal = (svg, options = {}) => {
 
     const tick = () => {
         const paths = [].slice.call(
-            svg.getSVGDocument().querySelectorAll('path')
+            (svg.getSVGDocument ? svg.getSVGDocument() : svg).querySelectorAll(
+                'path'
+            )
         );
 
         const nextPath = paths.find(path => path.style.strokeDashoffset > 0);
