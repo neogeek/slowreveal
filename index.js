@@ -26,13 +26,15 @@ const slowreveal = (svg, options = {}) => {
             )
         );
 
-        const nextPath = paths.find(path => path.style.strokeDashoffset > 0);
+        const nextPath = paths.find(
+            path => parseFloat(path.style.strokeDashoffset, 10) > 0
+        );
 
         if (nextPath) {
-            nextPath.style.strokeDashoffset = Math.max(
-                nextPath.style.strokeDashoffset - speed,
+            nextPath.style.strokeDashoffset = `${Math.max(
+                parseFloat(nextPath.style.strokeDashoffset, 10) - speed,
                 0
-            );
+            )}px`;
 
             window.requestAnimationFrame(tick.bind(this, svg));
         }
