@@ -5,6 +5,22 @@ const defaultOptions = {
 const slowreveal = (svg, options = {}) => {
     const { speed } = { ...defaultOptions, ...options };
 
+    const globalStyles = document.createElement('style');
+
+    globalStyles.appendChild(
+        document.createTextNode(
+            `/* slowreveal class to prevent flash of unstyled content */
+.slowreveal path {
+    stroke-dasharray: 10000000;
+    stroke-dashoffset: 10000000;
+}`
+        )
+    );
+
+    document.head.appendChild(globalStyles);
+
+    svg.classList.add('slowreveal');
+
     const load = () => {
         const paths = (svg.getSVGDocument
             ? svg.getSVGDocument()
