@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.2.1] - 2020-08-15
+
+- [hotfix] Remove custom styles when animation is complete. [#5](https://github.com/neogeek/slowreveal/pull/5)
+
 ## [v1.2.0] - 2020-08-15
 
 - [feat] Added styles to prevent flash of unstyled content. [#4](https://github.com/neogeek/slowreveal/pull/4)
