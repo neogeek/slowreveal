@@ -1,7 +1,7 @@
 {
   "name": "slowreveal",
   "description": "Animate SVG line drawings.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "index.js",
   "license": "MIT",
   "keywords": [
