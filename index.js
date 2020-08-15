@@ -53,6 +53,8 @@ const slowreveal = (svg, options = {}) => {
             )}px`;
 
             window.requestAnimationFrame(tick.bind(this, svg));
+        } else {
+            svg.classList.remove('slowreveal');
         }
     };
 
