@@ -12,7 +12,7 @@ $ npm install slowreveal
 
 ```javascript
 <script type="module" src="https://unpkg.com/slowreveal@1.2.1/index.js"></script>
-<script>
+<script type="module">
 import slowreveal from 'https://unpkg.com/slowreveal@1.2.1/index.js';
 </script>
 ```
